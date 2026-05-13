@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapulí Café | Naturalmente delicioso</title>
+    <meta name="description" content="Kapulí Café: Tu refugio saludable en Huaraz. Café de especialidad, comunidad de montañismo y running, y comida nutritiva para tus aventuras.">
+    <meta name="keywords" content="Café de especialidad en Huaraz, Montañismo, Running, Refugio saludable, Cafetería en Huaraz, Café de origen">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    
+    <!-- Google Fonts Fallback (Montserrat) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- JSON-LD SEO Local -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CafeOrCoffeeShop",
+      "name": "Kapulí Café",
+      "image": "",
+      "url": "",
+      "telephone": "",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Pasaje Daniel Coral Vega 566",
+        "addressLocality": "Huaraz",
+        "addressRegion": "Ancash",
+        "postalCode": "02001",
+        "addressCountry": "PE"
+      },
+      "servesCuisine": "Specialty Coffee",
+      "description": "Tu refugio saludable en Huaraz. Café de especialidad, comunidad de montañismo y running, y comida nutritiva para tus aventuras."
+    }
+    </script>
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div id="splash-screen" class="splash-screen">
+        <div class="splash-content">
+            <img src="assets/brand/logo.png" alt="Kapulí Café Logo" style="height: 280px; width: auto; margin: 0 auto; object-fit: contain;">
+            <h2 class="pulse-text" data-i18n="hero.slogan">Naturalmente delicioso</h2>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="assets/brand/logo.png" alt="Kapulí Café Logo" id="navbar-logo" style="height: 120px; width: auto; object-fit: contain;">
+            </div>
+            
+            <button class="menu-toggle" id="mobile-menu-btn" aria-label="Abrir menú">☰</button>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#hero" class="nav-item" data-i18n="nav.home">Inicio</a></li>
+                <li><a href="#menu" class="nav-item" data-i18n="nav.menu">Nuestra Oferta</a></li>
+                <li><a href="#market" class="nav-item" data-i18n="nav.market">Market</a></li>
+                <li><a href="#community" class="nav-item" data-i18n="nav.community">Comunidad</a></li>
+                <li><a href="#events" class="nav-item" data-i18n="nav.events">Eventos</a></li>
+            </ul>
+            <div class="lang-selector">
+                <button id="btn-es" class="active" aria-label="Cambiar a Español">ES</button>
+                <button id="btn-en" aria-label="Cambiar a Inglés">EN</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h2 data-i18n="hero.slogan">Naturalmente delicioso</h2>
+                <p data-i18n="hero.description">Tu refugio en Huaraz. Café de especialidad y energía saludable para tus rutas de montaña.</p>
+                <a href="#menu" class="btn btn-primary" data-i18n="hero.cta">Ver Menú</a>
+            </div>
+        </section>
+
+        <!-- Nuestra Oferta -->
+        <section id="menu" class="menu-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="menu.title">Nuestra Oferta</h2>
+                <div class="menu-categories">
+                    <div class="category-card" id="cat-coffee">
+                        <h3 data-i18n="menu.coffee.title">☕ Café de Especialidad</h3>
+                        
+                        <h4 style="text-align: left; color: var(--color-text-main); margin-top: 1rem; font-size: 1.1rem; border-bottom: 1px solid var(--color-primary); padding-bottom: 4px;">MÁQUINA ESPRESSO</h4>
+                        <ul class="product-list" style="margin-top: 0.5rem;">
+                            <li><span>Espresso</span> <span class="price">S/ 8.00</span></li>
+                            <li><span>Americano</span> <span class="price">S/ 8.00</span></li>
+                            <li><span>Macchiato</span> <span class="price">S/ 8.00</span></li>
+                            <li><span>Cortado</span> <span class="price">S/ 9.00</span></li>
+                            <li><span>Cappuccino</span> <span class="price">S/ 12.00</span></li>
+                            <li>
+                                <div style="display: flex; flex-direction: column;">
+                                    <span>Mocaccino <small style="font-size: 0.8em; opacity: 0.8;">(con cacao al 100%)</small></span>
+                                </div>
+                                <span class="price">S/ 15.00</span>
+                            </li>
+                            <li>
+                                <div style="display: flex; flex-direction: column;">
+                                    <span>Latte pro <small style="font-size: 0.8em; opacity: 0.8;">(con 25 g de proteína isolatada)</small></span>
+                                </div>
+                                <span class="price">S/ 21.00</span>
+                            </li>
+                        </ul>
+                        <h4 style="text-align: left; color: var(--color-text-main); margin-top: 1.5rem; font-size: 1.1rem; border-bottom: 1px solid var(--color-primary); padding-bottom: 4px;">MÉTODOS</h4>
+                        <ul class="product-list" style="margin-top: 0.5rem;">
+                            <li style="align-items: center; padding: 0; border-bottom: 1px dashed var(--color-border);">
+                                <div style="flex: 1; border-right: 1px solid var(--color-border); padding-right: 15px;">
+                                    <div style="padding: 0.5rem 0; border-bottom: 1px dashed var(--color-border);">
+                                        <div style="display: flex; flex-direction: column;">
+                                            <span title="Filtrado manual por goteo con perfil limpio">V60 <span class="method-icon"></span></span>
+                                            <span style="font-size: 0.8em; opacity: 0.8; margin-top: 2px;">Filtrado por goteo. Notas limpias y definidas</span>
+                                        </div>
+                                    </div>
+                                    <div style="padding: 0.5rem 0; border-bottom: 1px dashed var(--color-border);">
+                                        <div style="display: flex; flex-direction: column;">
+                                            <span>Prensa francesa</span>
+                                            <span style="font-size: 0.8em; opacity: 0.8; margin-top: 2px;">Inmersión completa. Cuerpo redondo y aceitoso</span>
+                                        </div>
+                                    </div>
+                                    <div style="padding: 0.5rem 0; border-bottom: 1px dashed var(--color-border);">
+                                        <div style="display: flex; flex-direction: column;">
+                                            <span>Moka italiana</span>
+                                            <span style="font-size: 0.8em; opacity: 0.8; margin-top: 2px;">Extracción a presión. Carácter intenso y tradicional</span>
+                                        </div>
+                                    </div>
+                                    <div style="padding: 0.5rem 0;">
+                                        <div style="display: flex; flex-direction: column;">
+                                            <span title="Método peruano de extracción artesanal">Mupeco <span class="method-icon"></span></span>
+                                            <span style="font-size: 0.8em; opacity: 0.8; margin-top: 2px;">Método peruano de extracción artesanal</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="price" style="margin-left: 15px; width: 60px; text-align: right;">S/ 15.00</span>
+                            </li>
+                            <li><span>Pasado</span> <span class="price">S/ 10.00</span></li>
+                        </ul>
+                        <div style="margin-top: var(--spacing-md); font-size: 0.85rem; color: var(--color-text-muted); text-align: left; padding-top: 15px; border-top: 1px solid var(--color-border);">
+                            <p><strong>Café de especialidad de <span style="color: var(--color-primary);">La Chacra D'dago</span>:</strong> el primer café biodinámico del Perú, nacido a 1,530 m s. n. m. en el corazón de Junín.</p>
+                        </div>
+                    </div>
+                    <div class="category-card" id="cat-breakfast">
+                        <h3 data-i18n="menu.breakfast.title">🥐 Desayuno Saludable</h3>
+                        <ul class="product-list">
+                            <li>Avena Kapulí <span class="price">S/ 15.00</span></li>
+                            <li>Tostadas Francesas <span class="price">S/ 18.00</span></li>
+                            <li>Bowl de Frutas <span class="price">S/ 16.00</span></li>
+                        </ul>
+                    </div>
+                    <div class="category-card" id="cat-executive">
+                        <h3 data-i18n="menu.executive.title">🍽️ Menú Ejecutivo</h3>
+                        <ul class="product-list">
+                            <li>Menú del Día <span class="price">S/ 20.00</span></li>
+                            <li>Opción Vegetariana <span class="price">S/ 22.00</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Market -->
+        <section id="market" class="market-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="market.title">Lleva Kapulí Contigo</h2>
+                <p class="section-subtitle" data-i18n="market.description">Descubre nuestro merchandising y productos locales.</p>
+                <div class="market-gallery">
+                    <div class="market-item">Taza Kapulí</div>
+                    <div class="market-item">Café en Grano (250g)</div>
+                    <div class="market-item">Prensa Francesa</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comunidad -->
+        <section id="community" class="community-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="community.title">Únete a la Comunidad Kapulí</h2>
+                <p class="section-subtitle" data-i18n="community.description">Más que clientes, somos una comunidad en movimiento.</p>
+                <div class="menu-categories">
+                    <div class="category-card">
+                        <h3>🏃 Running Club</h3>
+                        <p class="product-list" style="border:none;">Salidas grupales todos los domingos. ¡Todos los ritmos bienvenidos! Corre con nosotros por los senderos de Huaraz.</p>
+                        <br>
+                        <a href="#" class="btn btn-strava" style="font-size:0.9rem; padding:0.5rem 1rem;">Unirme en Strava</a>
+                    </div>
+                    <div class="category-card">
+                        <h3>🧗 Salidas a la Montaña</h3>
+                        <p class="product-list" style="border:none;">Punto de encuentro para trekkings y aclimatación. Conecta con otros montañistas y planifica tu próxima cumbre.</p>
+                        <div id="mountain-status" class="mountain-status-placeholder"></div>
+                    </div>
+                    <div class="category-card">
+                        <h3>🎙️ Eventos y Charlas</h3>
+                        <p class="product-list" style="border:none;">Proyecciones, charlas técnicas y café post-ruta. Aprende, comparte y disfruta de la cultura de montaña.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Citas Zen -->
+        <section id="zen-quotes" class="zen-section">
+            <div class="container">
+                <div id="zen-quote-container" class="zen-quote-container">
+                    <!-- El contenido será inyectado por main.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Música / Ambiente -->
+        <section id="vibes" class="vibes-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="vibes.title">Vibra con Kapulí</h2>
+                <div class="spotify-container">
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alquiler / Eventos -->
+        <section id="events" class="events-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="events.title">Celebra en Kapulí</h2>
+                <p class="section-subtitle" data-i18n="events.description">¿Buscas un lugar único para tus eventos, talleres o reuniones? Kapulí Café te ofrece un ambiente cálido y equipado en el corazón de Huaraz.</p>
+                
+                <div class="menu-categories" style="margin-bottom: var(--spacing-lg);">
+                    <div class="category-card" style="text-align: left;">
+                        <h3>👥 Capacidad Flexible</h3>
+                        <p class="product-list" style="border:none;">Ideal para grupos pequeños y medianos. Configuración adaptable a tus necesidades.</p>
+                    </div>
+                    <div class="category-card" style="text-align: left;">
+                        <h3>📶 Equipamiento Completo</h3>
+                        <p class="product-list" style="border:none;">Wi-Fi de alta velocidad, proyector y sistema de sonido disponibles.</p>
+                    </div>
+                </div>
+                
+                <a href="#" class="btn btn-primary" style="font-size: 1.1rem;">💬 Consultar Disponibilidad</a>
+            </div>
+        </section>
+
+        <!-- Social Media -->
+        <section id="social" class="social-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="social.title">Momentos Kapulí</h2>
+                <div class="social-grid">
+                    <div class="market-item">📸 Foto Instagram 1</div>
+                    <div class="market-item">📸 Foto Instagram 2</div>
+                    <div class="market-item">📸 Foto Instagram 3</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h3>Kapulí Café</h3>
+                <p data-i18n="footer.address">Dirección: Pasaje Daniel Coral Vega 566 - Huaraz.</p>
+            </div>
+            <div class="footer-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3933.208579040375!2d-77.5303254!3d-9.5292415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91a90d10f130b05b%3A0x6b45a0ed79c2dc01!2sPasaje%20Daniel%20Coral%20Vega%20566%2C%20Huaraz%2002001%2C%20Peru!5e0!3m2!1sen!2sus!4v1715632120000!5m2!1sen!2sus" width="100%" height="250" style="border:0; border-radius: 8px; margin-bottom: 1rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <br>
+                <a href="https://maps.app.goo.gl/ZvLGfyKCFGQQhLXx5" target="_blank" class="btn btn-secondary" data-i18n="footer.map_btn">Ver en Google Maps</a>
+            </div>
+            <div class="footer-social">
+                <!-- Iconos de RRSS -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot / Botón Flotante -->
+    <a href="#" class="floating-chat" id="floating-chat" aria-label="Abrir chat">
+        💬
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

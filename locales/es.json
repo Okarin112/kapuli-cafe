@@ -1,0 +1,48 @@
+{
+    "nav": {
+        "home": "Inicio",
+        "menu": "Nuestra Oferta",
+        "market": "Market",
+        "community": "Comunidad",
+        "events": "Eventos"
+    },
+    "hero": {
+        "slogan": "Naturalmente delicioso",
+        "description": "Tu refugio en Huaraz. Café de especialidad y energía saludable para tus rutas de montaña.",
+        "cta": "Ver Menú"
+    },
+    "menu": {
+        "title": "Nuestra Oferta",
+        "coffee": {
+            "title": "Café de Especialidad"
+        },
+        "breakfast": {
+            "title": "Desayuno Saludable"
+        },
+        "executive": {
+            "title": "Menú Ejecutivo"
+        }
+    },
+    "market": {
+        "title": "Lleva Kapulí Contigo",
+        "description": "Descubre nuestro merchandising y productos locales."
+    },
+    "community": {
+        "title": "Únete a la Comunidad Kapulí",
+        "description": "Forma parte de nuestros grupos de running, salidas de montaña y eventos sociales."
+    },
+    "vibes": {
+        "title": "Vibra con Kapulí"
+    },
+    "events": {
+        "title": "Celebra en Kapulí",
+        "description": "¿Buscas un lugar único para tus eventos, talleres o reuniones? Kapulí Café te ofrece un ambiente cálido y equipado en el corazón de Huaraz."
+    },
+    "social": {
+        "title": "Momentos Kapulí"
+    },
+    "footer": {
+        "address": "Dirección: Pasaje Daniel Coral Vega 566 - Huaraz.",
+        "map_btn": "Ver en Google Maps"
+    }
+}

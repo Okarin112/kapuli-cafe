@@ -1,0 +1,174 @@
+/* Componentes de UI (Botones, Tarjetas, etc) */
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-family: var(--font-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: none;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--color-primary); /* Marrón */
+    color: #FFFFFF; /* Blanco puro para contraste sobre marrón en tema oscuro */
+    box-shadow: 0 4px 15px rgba(210, 155, 117, 0.4);
+}
+
+.btn-primary:hover {
+    background-color: #B5805D; /* Tono más oscuro del marrón */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(210, 155, 117, 0.6);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--color-text-main);
+    color: var(--color-text-main);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-text-main);
+    color: var(--color-background);
+    transform: translateY(-3px);
+}
+
+.btn-strava {
+    background-color: var(--color-secondary);
+    color: #FFFFFF;
+    border: none;
+    font-weight: 800;
+    box-shadow: 0 4px 15px rgba(76, 159, 139, 0.4);
+}
+
+.btn-strava:hover {
+    background-color: var(--color-secondary-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(76, 159, 139, 0.6);
+}
+
+/* Tarjetas de Menú */
+.category-card {
+    background-color: var(--color-surface);
+    padding: var(--spacing-lg);
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    border: 1px solid var(--color-border);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.category-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-secondary); /* Verde Kapulí en el borde superior */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.category-card:hover::before {
+    transform: scaleX(1);
+}
+
+.category-card h3 {
+    color: var(--color-text-main);
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.product-list {
+    text-align: left;
+    margin-top: var(--spacing-md);
+}
+
+.product-list li {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed var(--color-border);
+    padding: 0.5rem 0;
+    color: var(--color-text-muted);
+}
+
+.product-list li:last-child {
+    border-bottom: none;
+}
+
+.product-list .price {
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+/* Galería de Market Placeholder */
+.market-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-sm);
+}
+
+.market-item {
+    background-color: var(--color-surface);
+    aspect-ratio: 1 / 1;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-muted);
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+
+.market-item:hover {
+    transform: scale(1.02);
+}
+
+/* Placeholder de Montaña */
+.mountain-status-placeholder {
+    min-height: 80px;
+    margin-top: var(--spacing-md);
+    border: 1px dashed var(--color-border);
+    border-radius: var(--border-radius);
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Botón flotante Chatbot */
+.floating-chat {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 65px;
+    height: 65px;
+    background-color: var(--color-secondary); /* Verde Kapulí */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    box-shadow: 0 4px 15px rgba(76, 159, 139, 0.4);
+    z-index: 1000;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.floating-chat:hover {
+    transform: scale(1.1) rotate(10deg);
+    background-color: var(--color-primary); /* Marrón Kapulí on hover */
+}

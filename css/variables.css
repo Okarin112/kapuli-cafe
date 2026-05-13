@@ -1,0 +1,30 @@
+/* Variables de CSS (Modo Oscuro Oficial) */
+:root {
+    /* Colores de la Marca */
+    --color-primary: #D29B75; /* Marrón Kapulí */
+    --color-primary-hover: #B5805D; /* Tono oscuro de Marrón */
+    --color-secondary: #4C9F8B; /* Verde Kapulí */
+    --color-secondary-hover: #3D8271; /* Tono oscuro de Verde */
+    --color-background: #161616; /* Negro Kapulí: Fondo principal */
+    --color-surface: #222222; /* Contenedores/Tarjetas (Un poco más claro) */
+    --color-text-main: #E1E1E1; /* Blanco Kapulí */
+    --color-text-muted: #A0A0A0; 
+    --color-border: rgba(225, 225, 225, 0.1); /* Divisores sutiles */
+    
+    /* Tipografía de la Marca */
+    --font-primary: 'Intro', 'Montserrat', sans-serif;
+    --font-secondary: 'Intro', 'Montserrat', sans-serif;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 6rem;
+
+    /* Borders & Shadows */
+    --border-radius: 12px;
+    --shadow-sm: 0 4px 6px rgba(0,0,0,0.2);
+    --shadow-md: 0 8px 16px rgba(0,0,0,0.4);
+}
+
