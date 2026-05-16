@@ -122,11 +122,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const revealElements = document.querySelectorAll('.reveal-text');
     if (revealElements.length > 0) {
         const revealObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach((entry, index) => {
+            entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add('visible');
-                    }, index * 100);
+                    const siblings = Array.from(entry.target.parentNode.querySelectorAll('.reveal-text'));
+                    const index = siblings.indexOf(entry.target);
+                    // Si el elemento no es parte de un grupo contiguo en su parent, el indexOf podría ser 0
+                    // pero si lo es, añadimos retraso escalonado.
+                    const delayIndex = index !== -1 ? index : 0;
+                    
+                    entry.target.style.transitionDelay = `${delayIndex * 150}ms`;
+                    entry.target.classList.add('visible');
                     observer.unobserve(entry.target);
                 }
             });
