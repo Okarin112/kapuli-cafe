@@ -97,8 +97,17 @@
 
 .category-card h3 {
     color: var(--color-text-main);
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: var(--spacing-sm);
+    font-family: var(--font-serif);
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.category-card h4 {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .product-list {
@@ -123,27 +132,63 @@
     color: var(--color-primary);
 }
 
-/* Galería de Market Placeholder */
-.market-gallery {
+/* Asymmetric Grid for Market and Social */
+.market-gallery, .social-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 250px;
     gap: var(--spacing-sm);
 }
 
 .market-item {
-    background-color: var(--color-surface);
-    aspect-ratio: 1 / 1;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: var(--border-radius);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-text-muted);
-    font-weight: 600;
+    overflow: hidden;
     transition: transform 0.3s ease;
 }
 
-.market-item:hover {
-    transform: scale(1.02);
+.market-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.market-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Asymmetric rules for items */
+.market-item:first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.market-item:nth-child(2) {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.market-item:nth-child(3) {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+/* Responsive Asymmetric Grid */
+@media (max-width: 768px) {
+    .market-gallery, .social-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+    }
+    .market-item:first-child, .market-item:nth-child(2), .market-item:nth-child(3) {
+        grid-column: span 1;
+        grid-row: span 1;
+        aspect-ratio: 16/9;
+    }
 }
 
 /* Mountain Dashboard (Reemplaza el placeholder) */

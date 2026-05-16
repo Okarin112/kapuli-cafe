@@ -54,11 +54,16 @@ section {
 .section-title {
     text-align: center;
     font-size: 3rem;
-    margin-bottom: var(--spacing-md);
-    color: var(--color-text-main); /* Cambiado a Negro Kapulí para máximo contraste */
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 4px; /* Espaciado Zen aumentado */
+    margin-bottom: var(--spacing-lg); /* Increased for more whitespace */
+    color: var(--color-text-main);
+    font-weight: 500;
+    font-family: var(--font-serif);
+    letter-spacing: 5px; /* Incremented */
+}
+
+.section-title em {
+    font-style: italic;
+    color: var(--color-primary); /* Acento sutil en cursiva */
 }
 
 .section-title span {
@@ -181,10 +186,18 @@ section {
 }
 
 .hero h2 {
-    font-size: 4rem;
-    color: var(--color-secondary); /* Verde Kapulí para el eslogan */
+    font-family: var(--font-serif);
+    font-size: 4.5rem;
+    color: var(--color-text-main);
     margin-bottom: var(--spacing-sm);
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Sombra ligeramente más fuerte para que resalte sobre la imagen */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.hero h2 em {
+    font-style: italic;
+    color: var(--color-primary);
 }
 
 .hero p {
@@ -230,11 +243,12 @@ section {
 .zen-quote-container {
     max-width: 800px;
     margin: 0 auto;
-    font-size: 1.1rem;
-    font-weight: 300;
+    font-size: 1.5rem;
+    font-family: var(--font-serif);
+    font-weight: 400;
     font-style: italic;
     color: var(--color-text-main);
-    letter-spacing: 4px; /* Letter spacing estricto */
+    letter-spacing: 2px;
     line-height: 1.8;
 }
 

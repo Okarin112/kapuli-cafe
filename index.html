@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/components.css">
     
-    <!-- Google Fonts Fallback (Montserrat) -->
+    <!-- Google Fonts Fallback (Montserrat & Cormorant Garamond) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <!-- JSON-LD SEO Local -->
     <script type="application/ld+json">
@@ -45,7 +45,7 @@
     <div id="splash-screen" class="splash-screen">
         <div class="splash-content">
             <img src="assets/brand/logo.png" alt="Kapulí Café Logo" class="splash-logo">
-            <h2 class="pulse-text" data-i18n="hero.slogan">Naturalmente delicioso</h2>
+            <h2 class="pulse-text" data-i18n="hero.slogan" style="font-family: var(--font-serif);"><em>Naturalmente</em> delicioso</h2>
         </div>
     </div>
     <!-- Navbar -->
@@ -75,7 +75,7 @@
         <!-- Hero Section -->
         <section id="hero" class="hero">
             <div class="hero-content">
-                <h2 data-i18n="hero.slogan">Naturalmente delicioso</h2>
+                <h2 data-i18n="hero.slogan"><em>Naturalmente</em> delicioso</h2>
                 <p data-i18n="hero.description">Tu refugio en Huaraz. Café de especialidad y energía saludable para tus rutas de montaña.</p>
                 <a href="#menu" class="btn btn-primary" data-i18n="hero.cta">Ver Menú</a>
             </div>
@@ -84,7 +84,7 @@
         <!-- Nuestra Oferta -->
         <section id="menu" class="menu-section">
             <div class="container">
-                <h2 class="section-title" data-i18n="menu.title">Nuestra Oferta</h2>
+                <h2 class="section-title" data-i18n="menu.title">Nuestra <em>Oferta</em></h2>
                 <div class="menu-categories">
                     <div class="category-card" id="cat-coffee">
                         <h3 data-i18n="menu.coffee.title">☕ Café de Especialidad</h3>
@@ -185,17 +185,17 @@
         <!-- Market -->
         <section id="market" class="market-section">
             <div class="container">
-                <h2 class="section-title" data-i18n="market.title">Lleva Kapulí Contigo</h2>
+                <h2 class="section-title" data-i18n="market.title">Lleva <em>Kapulí</em> Contigo</h2>
                 <p class="section-subtitle" data-i18n="market.description">Descubre nuestro merchandising y productos locales.</p>
                 <div class="market-gallery">
-                    <div class="market-item" style="padding: 0; overflow: hidden; border: none; background: none;">
-                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" alt="Taza Kapulí" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--border-radius);">
+                    <div class="market-item">
+                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" alt="Taza Kapulí">
                     </div>
-                    <div class="market-item" style="padding: 0; overflow: hidden; border: none; background: none;">
-                        <img src="https://images.unsplash.com/photo-1559525839-b184a4d698c7?auto=format&fit=crop&w=600&q=80" alt="Café en Grano" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--border-radius);">
+                    <div class="market-item">
+                        <img src="https://images.unsplash.com/photo-1559525839-b184a4d698c7?auto=format&fit=crop&w=600&q=80" alt="Café en Grano">
                     </div>
-                    <div class="market-item" style="padding: 0; overflow: hidden; border: none; background: none;">
-                        <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80" alt="Prensa Francesa" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--border-radius);">
+                    <div class="market-item">
+                        <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80" alt="Prensa Francesa">
                     </div>
                 </div>
             </div>
@@ -204,7 +204,7 @@
         <!-- Comunidad -->
         <section id="community" class="community-section">
             <div class="container">
-                <h2 class="section-title" data-i18n="community.title">Únete a la Comunidad Kapulí</h2>
+                <h2 class="section-title" data-i18n="community.title">Únete a la <em>Comunidad</em> Kapulí</h2>
                 <p class="section-subtitle" data-i18n="community.description">Más que clientes, somos una comunidad en movimiento.</p>
                 <div class="menu-categories">
                     <div class="category-card">
@@ -263,7 +263,7 @@
         <!-- Alquiler / Eventos -->
         <section id="events" class="events-section">
             <div class="container">
-                <h2 class="section-title" data-i18n="events.title">Celebra en Kapulí</h2>
+                <h2 class="section-title" data-i18n="events.title">Celebra en <em>Kapulí</em></h2>
                 <p class="section-subtitle" data-i18n="events.description">¿Buscas un lugar único para tus eventos, talleres o reuniones? Kapulí Café te ofrece un ambiente cálido y equipado en el corazón de Huaraz.</p>
                 
                 <div class="menu-categories" style="margin-bottom: var(--spacing-lg);">
@@ -284,16 +284,16 @@
         <!-- Social Media -->
         <section id="social" class="social-section">
             <div class="container">
-                <h2 class="section-title" data-i18n="social.title">Momentos Kapulí</h2>
-                <div class="social-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-sm);">
-                    <div class="market-item" style="padding: 0; overflow: hidden; border: none; background: none;">
-                        <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=600&q=80" alt="Café de Especialidad Instagram" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--border-radius);">
+                <h2 class="section-title" data-i18n="social.title"><em>Momentos</em> Kapulí</h2>
+                <div class="social-grid">
+                    <div class="market-item">
+                        <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=600&q=80" alt="Café de Especialidad Instagram">
                     </div>
-                    <div class="market-item" style="padding: 0; overflow: hidden; border: none; background: none;">
-                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80" alt="Montaña y Naturaleza Instagram" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--border-radius);">
+                    <div class="market-item">
+                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80" alt="Montaña y Naturaleza Instagram">
                     </div>
-                    <div class="market-item" style="padding: 0; overflow: hidden; border: none; background: none;">
-                        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80" alt="Extracción de Café Instagram" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--border-radius);">
+                    <div class="market-item">
+                        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80" alt="Extracción de Café Instagram">
                     </div>
                 </div>
             </div>
