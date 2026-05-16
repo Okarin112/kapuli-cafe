@@ -21,6 +21,15 @@
         },
         "executive": {
             "title": "Executive Menu"
+        },
+        "tasting": {
+            "citrus": "Citrus",
+            "chocolate": "Dark Chocolate",
+            "silky": "Silky Body"
+        },
+        "recovery": {
+            "title": "Mountain Recovery Drink 🏔️",
+            "desc": "Handcrafted hydrating beverage optimized for post-trail recovery"
         }
     },
     "market": {

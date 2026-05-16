@@ -21,6 +21,15 @@
         },
         "executive": {
             "title": "Menú Ejecutivo"
+        },
+        "tasting": {
+            "citrus": "Cítrico",
+            "chocolate": "Chocolate Amargo",
+            "silky": "Cuerpo Sedoso"
+        },
+        "recovery": {
+            "title": "Recuperador de Montaña 🏔️",
+            "desc": "Bebida hidratante artesanal optimizada para la recuperación post-trail"
         }
     },
     "market": {
