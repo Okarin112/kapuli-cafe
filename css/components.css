@@ -211,20 +211,20 @@
 /* Indicadores de Notas de Cata (Guía Sensorial) */
 .tasting-note-pill {
     display: inline-block;
-    font-size: 0.75rem;
-    padding: 4px 10px;
-    border-radius: 20px;
-    background-color: rgba(76, 159, 139, 0.15); /* secondary color transparent */
-    color: var(--color-secondary);
-    border: 1px solid rgba(76, 159, 139, 0.3);
     white-space: nowrap;
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--color-text-main);
+    border: 1px solid rgba(225, 225, 225, 0.15);
+    margin: 0 8px 8px 0;
     font-weight: 600;
 }
 
 .tasting-notes-container {
     display: flex;
     align-items: center;
-    gap: 6px;
     margin-top: 8px;
     flex-wrap: wrap;
 }
