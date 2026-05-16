@@ -292,20 +292,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: var(--spacing-lg);
     position: relative;
     max-width: 1000px;
     margin: 0 auto;
-    min-height: 500px;
+    min-height: 600px;
 }
 
-.wheel-nodes-left, .wheel-nodes-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 400px;
-    position: relative;
-    z-index: 2;
+.wheel-svg-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .wheel-node {
@@ -317,37 +317,25 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     cursor: pointer;
-    position: relative;
-    padding: 10px 0;
-    transition: color 0.3s ease;
+    position: absolute;
+    padding: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    z-index: 2;
 }
 
 .wheel-node:hover, .wheel-node.active {
     color: var(--color-text-main);
+    transform: scale(1.05);
 }
 
-/* Connecting Lines */
-.wheel-nodes-left .wheel-node::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: -60px; /* Connects towards the center */
-    width: 50px;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.15);
-    z-index: -1;
-}
+/* Absolute Positioning for 1000x600 Container */
+.node-l1 { top: 130px; left: 0px; text-align: right; width: 200px; }
+.node-l2 { top: 280px; left: -50px; text-align: right; width: 200px; }
+.node-l3 { top: 430px; left: 0px; text-align: right; width: 200px; }
 
-.wheel-nodes-right .wheel-node::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: -60px; /* Connects towards the center */
-    width: 50px;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.15);
-    z-index: -1;
-}
+.node-r1 { top: 130px; right: 0px; text-align: left; width: 200px; }
+.node-r2 { top: 280px; right: -50px; text-align: left; width: 200px; }
+.node-r3 { top: 430px; right: 0px; text-align: left; width: 200px; }
 
 /* Center Display */
 .lab-center-display {
@@ -373,7 +361,7 @@
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6); /* Equivalent to filter brightness(0.4) but better for text */
+    background-color: rgba(0, 0, 0, 0.6); /* Equivalent to filter brightness(0.4) */
     z-index: 1;
 }
 
@@ -404,24 +392,26 @@
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
     .coffee-wheel-container {
+        display: flex;
         flex-direction: column;
         height: auto;
+        padding-top: var(--spacing-lg);
     }
-    .wheel-nodes-left, .wheel-nodes-right {
-        height: auto;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 15px;
-        justify-content: center;
-        margin: 20px 0;
+    .wheel-svg-lines {
+        display: none; /* Hide SVG in mobile/tablet */
     }
-    .wheel-node::after {
-        display: none; /* Ocultamos líneas en móvil */
+    .wheel-node {
+        position: static;
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
     }
     .lab-center-display {
         width: 320px;
         height: 320px;
+        margin: 30px 0;
+        order: -1; /* Move center circle to top */
     }
 }

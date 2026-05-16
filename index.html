@@ -181,23 +181,33 @@
         <section id="coffee-lab-section" class="lab-section reveal-text">
             <div class="container">
                 <h2 class="section-title reveal-text">La Chacra <em>D'dago</em></h2>
-                <div class="coffee-wheel-container">
-                    <div class="wheel-nodes-left">
-                        <button class="wheel-node" data-key="extraccion">Extracción Preferida</button>
-                        <button class="wheel-node" data-key="tueste">Nivel de Tueste</button>
-                        <button class="wheel-node" data-key="secado">Método de Secado</button>
-                    </div>
+                <div id="lab-nodes-container" class="coffee-wheel-container">
+                    <!-- SVG lines connecting nodes to center -->
+                    <svg class="wheel-svg-lines" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid meet">
+                        <!-- Left nodes -->
+                        <line x1="200" y1="150" x2="500" y2="300" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1" />
+                        <line x1="150" y1="300" x2="500" y2="300" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1" />
+                        <line x1="200" y1="450" x2="500" y2="300" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1" />
+                        <!-- Right nodes -->
+                        <line x1="800" y1="150" x2="500" y2="300" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1" />
+                        <line x1="850" y1="300" x2="500" y2="300" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1" />
+                        <line x1="800" y1="450" x2="500" y2="300" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1" />
+                    </svg>
+
+                    <button class="wheel-node node-l1" data-key="extraccion">Extracción Preferida</button>
+                    <button class="wheel-node node-l2" data-key="tueste">Nivel de Tueste</button>
+                    <button class="wheel-node node-l3" data-key="secado">Secado</button>
+
                     <div id="lab-center-display" class="lab-center-display">
                         <div class="center-content">
-                            <h3 id="lab-title">abstract</h3>
-                            <p id="lab-desc">El primer café biodinámico del Perú, nacido a 1,530 m s. n. m. en el corazón de Junín. Un ecosistema en perfecto equilibrio.</p>
+                            <h3 id="lab-title" style="font-family: var(--font-serif);">Kapulí Café</h3>
+                            <p id="lab-desc" style="font-family: var(--font-primary);">El primer café biodinámico del Perú, nacido a 1,530 m s. n. m. en el corazón de Junín. Un ecosistema en perfecto equilibrio.</p>
                         </div>
                     </div>
-                    <div class="wheel-nodes-right">
-                        <button class="wheel-node" data-key="origen">Origen</button>
-                        <button class="wheel-node" data-key="variedad">Variedad</button>
-                        <button class="wheel-node" data-key="proceso">Proceso</button>
-                    </div>
+
+                    <button class="wheel-node node-r1" data-key="origen">Origen</button>
+                    <button class="wheel-node node-r2" data-key="variedad">Variedad</button>
+                    <button class="wheel-node node-r3" data-key="proceso">Proceso</button>
                 </div>
             </div>
         </section>

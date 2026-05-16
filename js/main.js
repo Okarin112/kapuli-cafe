@@ -144,47 +144,49 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 9. Coffee Wheel Interactive Logic
-    const wheelNodes = document.querySelectorAll('.wheel-node');
-    const labCenterDisplay = document.getElementById('lab-center-display');
-    const labTitle = document.getElementById('lab-title');
-    const labDesc = document.getElementById('lab-desc');
+    const initCoffeeLabWheel = () => {
+        const wheelNodes = document.querySelectorAll('.wheel-node');
+        const labCenterDisplay = document.getElementById('lab-center-display');
+        const labTitle = document.getElementById('lab-title');
+        const labDesc = document.getElementById('lab-desc');
 
-    if (wheelNodes.length > 0 && labCenterDisplay) {
-        const labData = {
+        if (!wheelNodes.length || !labCenterDisplay) return;
+
+        const coffeeLabContent = {
             'extraccion': {
-                title: 'Extracción Preferida',
-                desc: 'Recomendamos V60 para resaltar sus notas cítricas limpias o Espresso para un cuerpo denso y achocolatado.',
-                img: 'https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=800&q=80'
+                title: 'Extracción',
+                details: 'Recomendamos V60 para resaltar sus notas cítricas limpias o Espresso para un cuerpo denso.',
+                image_url: 'https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=800&q=80'
             },
             'tueste': {
-                title: 'Nivel de Tueste',
-                desc: 'Tueste medio ligero. Perfil desarrollado cuidadosamente para equilibrar acidez brillante y dulzor natural.',
-                img: 'https://images.unsplash.com/photo-1559525839-b184a4d698c7?auto=format&fit=crop&w=800&q=80'
+                title: 'Tueste',
+                details: 'Tueste medio ligero. Perfil desarrollado cuidadosamente para equilibrar acidez brillante y dulzor natural.',
+                image_url: 'https://images.unsplash.com/photo-1559525839-b184a4d698c7?auto=format&fit=crop&w=800&q=80'
             },
             'secado': {
-                title: 'Método de Secado',
-                desc: 'Secado lento al sol en camas africanas elevadas, permitiendo una deshidratación homogénea y controlada.',
-                img: 'https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?auto=format&fit=crop&w=800&q=80'
+                title: 'Secado',
+                details: 'Secado lento al sol en camas africanas elevadas, permitiendo una deshidratación homogénea.',
+                image_url: 'https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?auto=format&fit=crop&w=800&q=80'
             },
             'origen': {
                 title: 'Origen',
-                desc: 'Junín, Perú. Cultivado a 1,530 m s. n. m. bajo la atenta mirada de la familia Marin.',
-                img: 'https://images.unsplash.com/photo-1524350876685-274059332603?auto=format&fit=crop&w=800&q=80'
+                details: 'Junín, Perú (1,530 msnm). Enclavado en el corazón de la selva central.',
+                image_url: 'https://images.unsplash.com/photo-1524350876685-274059332603?auto=format&fit=crop&w=800&q=80'
             },
             'variedad': {
                 title: 'Variedad',
-                desc: 'Typica y Caturra bajo prácticas biodinámicas. Un ecosistema que respeta los ciclos cósmicos lunares.',
-                img: 'https://images.unsplash.com/photo-1518832553480-1614ebf22497?auto=format&fit=crop&w=800&q=80'
+                details: 'Biodinámico. Ensamblaje orgánico de Typica, Caturra y Borbón.',
+                image_url: 'https://images.unsplash.com/photo-1518832553480-1614ebf22497?auto=format&fit=crop&w=800&q=80'
             },
             'proceso': {
                 title: 'Proceso',
-                desc: 'Lavado orgánico con fermentación extendida. Las cerezas despulpadas reposan revelando su complejidad intrínseca.',
-                img: 'https://images.unsplash.com/photo-1611162458324-aae1eb4129a4?auto=format&fit=crop&w=800&q=80'
+                details: 'Lavado Orgánico. Fermentación controlada y lavado artesanal con agua de manantial.',
+                image_url: 'https://images.unsplash.com/photo-1611162458324-aae1eb4129a4?auto=format&fit=crop&w=800&q=80'
             }
         };
 
         const updateCenterDisplay = (key) => {
-            const data = labData[key];
+            const data = coffeeLabContent[key];
             if (!data) return;
 
             // Trigger Fade Out
@@ -192,20 +194,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
             setTimeout(() => {
                 labTitle.innerText = data.title;
-                labDesc.innerText = data.desc;
-                labCenterDisplay.style.backgroundImage = `url('${data.img}')`;
+                labDesc.innerText = data.details;
+                labCenterDisplay.style.backgroundImage = `url('${data.image_url}')`;
                 
                 // Trigger Fade In
                 labCenterDisplay.classList.remove('fading');
-            }, 400); // Matches the CSS transition duration
+            }, 400); // 0.4s fade matches CSS cubic-bezier
         };
 
         wheelNodes.forEach(node => {
-            // Soporta click (mobile) y mouseenter (desktop)
             const triggerUpdate = (e) => {
-                if (e.type === 'mouseenter' && window.innerWidth <= 900) return; // Prevent double trigger on mobile tap
+                if (e.type === 'mouseenter' && window.innerWidth <= 1024) return;
                 
-                // Update active class
                 wheelNodes.forEach(n => n.classList.remove('active'));
                 node.classList.add('active');
                 
@@ -216,5 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
             node.addEventListener('mouseenter', triggerUpdate);
             node.addEventListener('click', triggerUpdate);
         });
-    }
+    };
+
+    initCoffeeLabWheel();
 });
