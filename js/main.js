@@ -59,17 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 3. Botón flotante del Chatbot (Acción de ejemplo)
-    const floatingChat = document.getElementById('floating-chat');
-    if (floatingChat) {
-        floatingChat.addEventListener('click', (e) => {
-            e.preventDefault();
-            // Aquí se puede abrir un modal de chat o redirigir a WhatsApp
-            console.log('Abrir Chat / WhatsApp');
-            // window.open('https://wa.me/numero_aqui', '_blank');
-            alert('¡Hola! Pronto podrás conversar con nosotros por aquí.');
-        });
-    }
+    // 3. Botón flotante del Chatbot ahora usa href directo en HTML
 
     // 4. Citas Zen Dinámicas
     const initZenQuotes = () => {

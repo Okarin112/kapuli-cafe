@@ -108,6 +108,12 @@
                                 </div>
                                 <span class="price">S/ 21.00</span>
                             </li>
+                            <li>
+                                <div style="display: flex; flex-direction: column;">
+                                    <span>Recuperador de Montaña 🏔️ <small style="font-size: 0.8em; opacity: 0.8; display: block; margin-top: 2px;">Bebida hidratante artesanal optimizada para la recuperación post-trail</small></span>
+                                </div>
+                                <span class="price">S/ 14.00</span>
+                            </li>
                         </ul>
                         <h4 style="text-align: left; color: var(--color-text-main); margin-top: 1.5rem; font-size: 1.1rem; border-bottom: 1px solid var(--color-primary); padding-bottom: 4px;">MÉTODOS</h4>
                         <ul class="product-list" style="margin-top: 0.5rem;">
@@ -181,9 +187,15 @@
                 <h2 class="section-title" data-i18n="market.title">Lleva Kapulí Contigo</h2>
                 <p class="section-subtitle" data-i18n="market.description">Descubre nuestro merchandising y productos locales.</p>
                 <div class="market-gallery">
-                    <div class="market-item">Taza Kapulí</div>
-                    <div class="market-item">Café en Grano (250g)</div>
-                    <div class="market-item">Prensa Francesa</div>
+                    <div class="market-item" style="padding: 0; overflow: hidden; border: none; background: none;">
+                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=600&auto=format&fit=crop" alt="Taza Kapulí" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--border-radius);">
+                    </div>
+                    <div class="market-item" style="padding: 0; overflow: hidden; border: none; background: none;">
+                        <img src="https://images.unsplash.com/photo-1559525839-b184a4d698c7?q=80&w=600&auto=format&fit=crop" alt="Café en Grano" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--border-radius);">
+                    </div>
+                    <div class="market-item" style="padding: 0; overflow: hidden; border: none; background: none;">
+                        <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?q=80&w=600&auto=format&fit=crop" alt="Prensa Francesa" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--border-radius);">
+                    </div>
                 </div>
             </div>
         </section>
@@ -272,10 +284,16 @@
         <section id="social" class="social-section">
             <div class="container">
                 <h2 class="section-title" data-i18n="social.title">Momentos Kapulí</h2>
-                <div class="social-grid">
-                    <div class="market-item">📸 Foto Instagram 1</div>
-                    <div class="market-item">📸 Foto Instagram 2</div>
-                    <div class="market-item">📸 Foto Instagram 3</div>
+                <div class="social-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-sm);">
+                    <div class="market-item" style="padding: 0; overflow: hidden; border: none; background: none;">
+                        <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=600&auto=format&fit=crop" alt="Café de Especialidad Instagram" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--border-radius);">
+                    </div>
+                    <div class="market-item" style="padding: 0; overflow: hidden; border: none; background: none;">
+                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=600&auto=format&fit=crop" alt="Montaña y Naturaleza Instagram" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--border-radius);">
+                    </div>
+                    <div class="market-item" style="padding: 0; overflow: hidden; border: none; background: none;">
+                        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=600&auto=format&fit=crop" alt="Extracción de Café Instagram" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--border-radius);">
+                    </div>
                 </div>
             </div>
         </section>
@@ -300,7 +318,7 @@
     </footer>
 
     <!-- Chatbot / Botón Flotante -->
-    <a href="#" class="floating-chat" id="floating-chat" aria-label="Abrir chat">
+    <a href="https://wa.me/51999999999?text=Hola%20Kapulí%20Café!%20Quiero%20consultar%20sobre%20el%20espacio%20de%20eventos%20o%20el%20café%20de%20especialidad." target="_blank" rel="noopener noreferrer" class="floating-chat" id="floating-chat" aria-label="Abrir chat">
         💬
     </a>
 
