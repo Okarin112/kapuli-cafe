@@ -19,6 +19,13 @@
     text-align: center;
 }
 
+.splash-logo {
+    height: 280px;
+    width: auto;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
 .pulse-text {
     color: var(--color-secondary);
     margin-top: 2rem;
@@ -41,6 +48,7 @@
 
 section {
     padding: var(--spacing-xl) 0;
+    transition: opacity 1s ease, visibility 1s ease;
 }
 
 .section-title {
@@ -78,7 +86,7 @@ section {
     -webkit-backdrop-filter: blur(15px);
     z-index: 1000;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    transition: all 0.3s ease;
+    transition: all 0.3s ease, opacity 1s ease, visibility 1s ease;
 }
 
 .header.scrolled {
@@ -226,7 +234,7 @@ section {
     font-weight: 300;
     font-style: italic;
     color: var(--color-text-main);
-    letter-spacing: 4px;
+    letter-spacing: 4px; /* Letter spacing estricto */
     line-height: 1.8;
 }
 
@@ -351,5 +359,13 @@ section {
 
     .section-title {
         font-size: 2.2rem;
+    }
+
+    .splash-logo {
+        height: 180px; /* Tamaño optimizado en móvil */
+    }
+
+    #navbar-logo {
+        height: 80px !important; /* Tamaño consistente en móvil */
     }
 }

@@ -44,7 +44,7 @@
     <!-- Splash Screen -->
     <div id="splash-screen" class="splash-screen">
         <div class="splash-content">
-            <img src="assets/brand/logo.png" alt="Kapulí Café Logo" style="height: 280px; width: auto; margin: 0 auto; object-fit: contain;">
+            <img src="assets/brand/logo.png" alt="Kapulí Café Logo" class="splash-logo">
             <h2 class="pulse-text" data-i18n="hero.slogan">Naturalmente delicioso</h2>
         </div>
     </div>
@@ -115,7 +115,9 @@
                                 <div style="flex: 1; border-right: 1px solid var(--color-border); padding-right: 15px;">
                                     <div style="padding: 0.5rem 0; border-bottom: 1px dashed var(--color-border);">
                                         <div style="display: flex; flex-direction: column;">
-                                            <span title="Filtrado manual por goteo con perfil limpio">V60 <span class="method-icon"></span></span>
+                                            <span title="Filtrado manual por goteo con perfil limpio" style="display: flex; align-items: center;">V60 
+                                                <svg style="margin-left:5px;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-secondary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 18 3 12 15 6 3"></polygon><line x1="12" y1="15" x2="12" y2="21"></line></svg>
+                                            </span>
                                             <span style="font-size: 0.8em; opacity: 0.8; margin-top: 2px;">Filtrado por goteo. Notas limpias y definidas</span>
                                         </div>
                                     </div>
@@ -133,7 +135,9 @@
                                     </div>
                                     <div style="padding: 0.5rem 0;">
                                         <div style="display: flex; flex-direction: column;">
-                                            <span title="Método peruano de extracción artesanal">Mupeco <span class="method-icon"></span></span>
+                                            <span title="Método peruano de extracción artesanal" style="display: flex; align-items: center;">Mupeco 
+                                                <svg style="margin-left:5px;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-secondary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h14l-2 10H7L5 4z"></path><path d="M12 14v7"></path><path d="M9 21h6"></path></svg>
+                                            </span>
                                             <span style="font-size: 0.8em; opacity: 0.8; margin-top: 2px;">Método peruano de extracción artesanal</span>
                                         </div>
                                     </div>
@@ -144,6 +148,12 @@
                         </ul>
                         <div style="margin-top: var(--spacing-md); font-size: 0.85rem; color: var(--color-text-muted); text-align: left; padding-top: 15px; border-top: 1px solid var(--color-border);">
                             <p><strong>Café de especialidad de <span style="color: var(--color-primary);">La Chacra D'dago</span>:</strong> el primer café biodinámico del Perú, nacido a 1,530 m s. n. m. en el corazón de Junín.</p>
+                            <div class="tasting-notes-container" style="margin-top: 8px;">
+                                <span style="font-size: 0.8em; font-weight: bold; margin-right: 5px;">Notas de cata:</span>
+                                <span class="tasting-note" style="background-color: #D29B75;" title="Chocolate"></span>
+                                <span class="tasting-note" style="background-color: #E2C044;" title="Cítricos"></span>
+                                <span class="tasting-note" style="background-color: #8D5A46;" title="Panela"></span>
+                            </div>
                         </div>
                     </div>
                     <div class="category-card" id="cat-breakfast">
@@ -193,7 +203,7 @@
                     <div class="category-card">
                         <h3>🧗 Salidas a la Montaña</h3>
                         <p class="product-list" style="border:none;">Punto de encuentro para trekkings y aclimatación. Conecta con otros montañistas y planifica tu próxima cumbre.</p>
-                        <div id="mountain-status" class="mountain-status-placeholder"></div>
+                        <div id="mountain-dashboard" class="mountain-dashboard"></div>
                     </div>
                     <div class="category-card">
                         <h3>🎙️ Eventos y Charlas</h3>
@@ -203,19 +213,12 @@
             </div>
         </section>
 
-        <!-- Citas Zen -->
+        <!-- Citas Zen y Refugio Literario -->
         <section id="zen-quotes" class="zen-section">
             <div class="container">
-                <div id="zen-quote-container" class="zen-quote-container">
+                <div id="zen-quote-container" class="zen-quote-container" style="margin-bottom: var(--spacing-lg);">
                     <!-- El contenido será inyectado por main.js -->
                 </div>
-            </div>
-        </section>
-
-        <!-- Música / Ambiente -->
-        <section id="vibes" class="vibes-section">
-            <div class="container">
-                <h2 class="section-title" data-i18n="vibes.title">Vibra con Kapulí</h2>
                 <div class="spotify-container">
                     <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 </div>
@@ -283,5 +286,8 @@
     <script src="js/translations.js"></script>
     <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
+    
+    <!-- Cursor Personalizado -->
+    <div class="custom-cursor"></div>
 </body>
 </html>
