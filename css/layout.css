@@ -319,6 +319,18 @@ section {
     }
 }
 
+/* Scroll Reveal Animation */
+.reveal-text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s cubic-bezier(0.215, 0.610, 0.355, 1.000), transform 1s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+.reveal-text.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Responsive y Drawer Mobile */
 .menu-toggle {
     display: none;
