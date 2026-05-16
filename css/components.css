@@ -43,7 +43,12 @@
     color: #FFFFFF;
     border: none;
     font-weight: 800;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+    width: 100%;
+    max-width: 250px;
     box-shadow: 0 4px 15px rgba(76, 159, 139, 0.4);
+    text-decoration: none;
 }
 
 .btn-strava:hover {
@@ -204,20 +209,24 @@
 }
 
 /* Indicadores de Notas de Cata (Guía Sensorial) */
-.tasting-note {
+.tasting-note-pill {
     display: inline-block;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    margin-right: 4px;
-    vertical-align: middle;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background-color: rgba(76, 159, 139, 0.15); /* secondary color transparent */
+    color: var(--color-secondary);
+    border: 1px solid rgba(76, 159, 139, 0.3);
+    white-space: nowrap;
+    font-weight: 600;
 }
 
 .tasting-notes-container {
     display: flex;
     align-items: center;
-    gap: 4px;
-    margin-top: 4px;
+    gap: 6px;
+    margin-top: 8px;
+    flex-wrap: wrap;
 }
 
 /* Accesibilidad Selector Idioma */
