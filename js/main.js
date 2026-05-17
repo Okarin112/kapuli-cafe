@@ -1,7 +1,16 @@
 // Lógica Principal de la UI
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 0. Splash Screen Logic
+    // 0. Initialize Lenis Smooth Scroll
+    const lenis = new Lenis({ 
+        duration: 1.2, 
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) 
+    });
+    function raf(time) { 
+        lenis.raf(time); 
+        requestAnimationFrame(raf); 
+    }
+    requestAnimationFrame(raf);
     const splashScreen = document.getElementById('splash-screen');
     if (splashScreen) {
         window.addEventListener('load', () => {
