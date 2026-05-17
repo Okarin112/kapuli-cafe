@@ -246,22 +246,23 @@
                     <div class="category-card">
                         <h3>🧗 Salidas a la Montaña</h3>
                         <p class="product-list" style="border:none;">Punto de encuentro para trekkings y aclimatación. Conecta con otros montañistas y planifica tu próxima cumbre.</p>
-                        <div id="mountain-dashboard" class="mountain-dashboard">
-                            <div class="weather-card reveal-text">
+                        <div id="mountain-dashboard" class="mountain-dashboard" style="overflow: hidden;">
+                            <div class="macro-typography">6,768m</div>
+                            <div class="weather-card reveal-text" style="position: relative; z-index: 1;">
                                 <div class="weather-location">Huaraz (3,052m)</div>
                                 <div class="weather-data" style="display: flex; align-items: center; justify-content: center; gap: 8px;">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
                                     <span><span id="temp-huaraz">18°C</span> | <span id="cond-huaraz">Despejado</span></span>
                                 </div>
                             </div>
-                            <div class="weather-card reveal-text">
+                            <div class="weather-card reveal-text" style="position: relative; z-index: 1;">
                                 <div class="weather-location">Laguna Churup (4,450m)</div>
                                 <div class="weather-data" style="display: flex; align-items: center; justify-content: center; gap: 8px;">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
                                     <span><span id="temp-churup">8°C</span> | <span id="cond-churup">Nublado</span></span>
                                 </div>
                             </div>
-                            <div class="weather-card reveal-text">
+                            <div class="weather-card reveal-text" style="position: relative; z-index: 1;">
                                 <div class="weather-location">Nevado Vallunaraju (5,686m)</div>
                                 <div class="weather-data" style="display: flex; align-items: center; justify-content: center; gap: 8px;">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
@@ -330,36 +331,42 @@
         </section>
 
         <!-- Pilares Section (Onyx Seed to Cup style) -->
-        <section id="pilares-section" class="pilares-section reveal-text">
-            <div class="container" style="text-align: center; margin-bottom: 2rem;">
+        <section id="pilares-section" class="pilares-section reveal-text" style="position: relative;">
+            <div class="macro-typography">KAPULÍ</div>
+            <div class="container" style="text-align: center; margin-bottom: 2rem; position: relative; z-index: 1;">
                 <h2 class="section-title reveal-text" style="text-transform: lowercase;">de la semilla a la ruta</h2>
             </div>
             <div id="pilares-container" class="pilares-container">
-                <div class="pilar-col" style="background-image: url('https://images.unsplash.com/photo-1524350876685-274059332603?auto=format&fit=crop&w=600&q=80');">
+                <div class="pilar-col">
+                    <img src="https://images.unsplash.com/photo-1524350876685-274059332603?auto=format&fit=crop&w=600&q=80" alt="Origen" class="pilar-bg-img">
                     <div class="pilar-content">
                         <span class="pilar-num">01</span>
                         <h3 class="pilar-title">ORIGEN</h3>
                     </div>
                 </div>
-                <div class="pilar-col" style="background-image: url('https://images.unsplash.com/photo-1559525839-b184a4d698c7?auto=format&fit=crop&w=600&q=80');">
+                <div class="pilar-col">
+                    <img src="https://images.unsplash.com/photo-1559525839-b184a4d698c7?auto=format&fit=crop&w=600&q=80" alt="Tueste" class="pilar-bg-img">
                     <div class="pilar-content">
                         <span class="pilar-num">02</span>
                         <h3 class="pilar-title">TUESTE</h3>
                     </div>
                 </div>
-                <div class="pilar-col" style="background-image: url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=600&q=80');">
+                <div class="pilar-col">
+                    <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=600&q=80" alt="Comunidad" class="pilar-bg-img">
                     <div class="pilar-content">
                         <span class="pilar-num">03</span>
                         <h3 class="pilar-title">COMUNIDAD</h3>
                     </div>
                 </div>
-                <div class="pilar-col" style="background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80');">
+                <div class="pilar-col">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80" alt="Montaña" class="pilar-bg-img">
                     <div class="pilar-content">
                         <span class="pilar-num">04</span>
                         <h3 class="pilar-title">MONTAÑA</h3>
                     </div>
                 </div>
-                <div class="pilar-col" style="background-image: url('https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?auto=format&fit=crop&w=600&q=80');">
+                <div class="pilar-col">
+                    <img src="https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?auto=format&fit=crop&w=600&q=80" alt="Hospitalidad" class="pilar-bg-img">
                     <div class="pilar-content">
                         <span class="pilar-num">05</span>
                         <h3 class="pilar-title">HOSPITALIDAD</h3>

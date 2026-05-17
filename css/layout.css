@@ -130,6 +130,7 @@ section {
     letter-spacing: 1px;
     position: relative;
     padding-bottom: 4px;
+    text-decoration: none;
 }
 
 .nav-links a::after {
@@ -137,14 +138,17 @@ section {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 0%;
-    height: 2px;
-    background-color: var(--color-primary);
-    transition: width 0.3s ease;
+    width: 100%;
+    height: 1px;
+    background-color: #c5a880; /* color-gold */
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.nav-links a:hover::after {
-    width: 100%;
+.nav-links a:hover::after, .nav-links a:focus::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 .lang-selector button {
@@ -427,4 +431,26 @@ section {
     #navbar-logo {
         height: 80px !important; /* Tamaño consistente en móvil */
     }
+}
+
+/* Macro Tipografía Estructural */
+.macro-typography {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18rem;
+    font-weight: 900;
+    color: #ffffff;
+    opacity: 0.02;
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+    line-height: 1;
+    font-family: var(--font-serif);
+    white-space: nowrap;
+}
+
+#mountain-dashboard .macro-typography {
+    font-size: 12rem;
 }
