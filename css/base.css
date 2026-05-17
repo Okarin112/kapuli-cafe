@@ -7,6 +7,8 @@
 
 html {
     scroll-behavior: smooth;
+    text-size-adjust: 100%;
+    overflow-x: hidden;
     scroll-padding-top: 85px; /* Evitar que el header fijo tape los títulos */
     font-size: 16px;
 }
@@ -19,6 +21,7 @@ body {
     color: var(--color-text-main);
     line-height: 1.6;
     overflow-x: hidden;
+    -webkit-overflow-scrolling: touch; /* Fuerza la fluidez inercial nativa en dispositivos iOS/Safari */
 }
 
 h1, h2, h3, h4, h5, h6 {

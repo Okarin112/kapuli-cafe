@@ -317,7 +317,6 @@
 
 .lab-section .wheel-node {
     color: var(--color-text-muted);
-    will-change: transform, color;
 }
 
 .lab-section .wheel-node:hover, .lab-section .wheel-node.active {
@@ -371,7 +370,6 @@
     padding: 10px;
     transition: color 0.3s ease, transform 0.3s ease;
     z-index: 2;
-    will-change: transform, color;
 }
 
 .wheel-node:hover, .wheel-node.active {
@@ -406,7 +404,6 @@
     overflow: hidden;
     box-shadow: 0 0 40px rgba(0,0,0,0.8);
     transition: opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-    will-change: opacity;
 }
 
 .lab-center-display::before {
