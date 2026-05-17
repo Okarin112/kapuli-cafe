@@ -305,34 +305,37 @@
 
 /* Coffee Wheel Component (Onyx Style) */
 .lab-section {
-    background-color: #EFECE6;
+    background-color: #000000 !important;
     padding: var(--spacing-xl) 0;
-    color: #1C1C1C;
+    color: var(--color-text-main);
     overflow: hidden;
 }
 
 .lab-section .section-title {
-    color: #000000;
+    color: var(--color-text-main);
 }
 
 .lab-section .wheel-node {
-    color: #555555;
+    color: var(--color-text-muted);
+    will-change: transform, color;
 }
 
 .lab-section .wheel-node:hover, .lab-section .wheel-node.active {
-    color: #000000;
+    color: var(--color-text-main);
 }
 
 .lab-section .center-content h3 {
-    color: #000000;
+    color: #F4F1EA !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .lab-section .center-content p {
-    color: #1C1C1C;
+    color: #F4F1EA !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .lab-section .wheel-svg-lines line {
-    stroke: rgba(0, 0, 0, 0.15) !important;
+    stroke: rgba(255, 255, 255, 0.15) !important;
 }
 
 .coffee-wheel-container {
@@ -368,6 +371,7 @@
     padding: 10px;
     transition: color 0.3s ease, transform 0.3s ease;
     z-index: 2;
+    will-change: transform, color;
 }
 
 .wheel-node:hover, .wheel-node.active {
@@ -402,13 +406,14 @@
     overflow: hidden;
     box-shadow: 0 0 40px rgba(0,0,0,0.8);
     transition: opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: opacity;
 }
 
 .lab-center-display::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6); /* Equivalent to filter brightness(0.4) */
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.75);
     z-index: 1;
 }
 
@@ -420,7 +425,6 @@
     position: relative;
     z-index: 2;
     padding: var(--spacing-md);
-    color: var(--color-text-main);
 }
 
 .center-content h3 {

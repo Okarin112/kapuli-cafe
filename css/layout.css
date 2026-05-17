@@ -337,6 +337,7 @@ section {
     opacity: 0;
     transform: translateY(60px) scale(0.98);
     transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
 }
 
 .reveal-text.visible {
