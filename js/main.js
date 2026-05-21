@@ -109,14 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
     updateMountainWeather();
     initZenQuotes();
 
-    // 7. Custom Cursor Mover
-    const cursor = document.querySelector('.custom-cursor');
-    if (cursor) {
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-        });
-    }
 
     // 8. Scroll Reveal Animations
     const revealElements = document.querySelectorAll('.reveal-text');
